@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="300" MinHeight="300" MinWidth="300">
+        Title="MainWindow" Height="395.5" Width="300" MinHeight="300" MinWidth="300">
     <Window.Resources>
         
     </Window.Resources>
@@ -24,9 +24,28 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.ColumnSpan="4" Background="#FFDEDEDE" />
-        <Viewbox Grid.ColumnSpan="4" HorizontalAlignment="Right">
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="4" Background="#FFDEDEDE" />
+        <Viewbox Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Right" Margin="0,0,15,0" >
             <TextBlock x:Name="formula" Text="0"/>
         </Viewbox>
+        <Button Grid.Row="1" Grid.Column="0" Content="AC" IsCancel="True"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="+/-"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="C"/>
+        <Button Grid.Row="1" Grid.Column="3" Content="/" Background="#FFFF9C6E"/>
+        <Button Grid.Row="2" Grid.Column="0" Content="7" Background="#FF9B9494"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="8" Background="#FF9B9494"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="9" Background="#FF9B9494"/>
+        <Button Grid.Row="2" Grid.Column="3" Content="*" Background="#FFFF9C6E"/>
+        <Button Grid.Row="3" Grid.Column="0" Content="4" Background="#FF9B9494"/>
+        <Button Grid.Row="3" Grid.Column="1" Content="5" Background="#FF9B9494"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="6" Background="#FF9B9494"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="-" Background="#FFFF9C6E"/>
+        <Button Grid.Row="4" Grid.Column="0" Content="1" Background="#FF9B9494"/>
+        <Button Grid.Row="4" Grid.Column="1" Content="2" Background="#FF9B9494"/>
+        <Button Grid.Row="4" Grid.Column="2" Content="3" Background="#FF9B9494"/>
+        <Button Grid.Row="4" Grid.Column="3" Content="+" Background="#FFFF9C6E"/>
+        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Background="#FF9B9494"/>
+        <Button Grid.Row="5" Grid.Column="2" Content="." Background="#FF9B9494"/>
+        <Button Grid.Row="5" Grid.Column="3" Content="=" Background="#FFFF9C6E"/>
     </Grid>
 </Window>
