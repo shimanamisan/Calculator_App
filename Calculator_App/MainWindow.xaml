@@ -7,7 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="395.5" Width="300" MinHeight="300" MinWidth="300">
     <Window.Resources>
-        
+        <!-- ベースとなるボタンのスタイル -->
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="1"/>
+        </Style>
+        <!-- クリアボタンのスタイル -->
+        <Style x:Key="ButtonStyleClear" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="#FFFF9C6E"/>
+            <Setter Property="Forgeground" Value="White"/>
+        </Style>
+        <!-- 数字ボタンのスタイル -->
+        <Style x:Key="ButtonStyleClear" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="#FF9B9494"/>
+            <Setter Property="Forgeground" Value="White"/>
+        </Style>
+
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
