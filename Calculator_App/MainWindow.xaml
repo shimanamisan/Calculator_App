@@ -15,13 +15,17 @@
         </Style>
         <!-- クリアボタンのスタイル -->
         <Style x:Key="ButtonStyleClear" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
-            <Setter Property="Background" Value="#FFFF9C6E"/>
-            <Setter Property="Forgeground" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
         </Style>
         <!-- 数字ボタンのスタイル -->
-        <Style x:Key="ButtonStyleClear" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+        <Style x:Key="ButtonStyleNum" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
             <Setter Property="Background" Value="#FF9B9494"/>
-            <Setter Property="Forgeground" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <!-- 計算ボタンのスタイル -->
+        <Style x:Key="ButtonStyleCalc" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="#FFFF9C6E"/>
+            <Setter Property="Foreground" Value="Black"/>
         </Style>
 
     </Window.Resources>
@@ -44,10 +48,10 @@
         <Viewbox Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Right" Margin="0,0,15,0" >
             <TextBlock x:Name="formula" Text="0"/>
         </Viewbox>
-        <Button Grid.Row="1" Grid.Column="0" Content="AC" IsCancel="True"/>
-        <Button Grid.Row="1" Grid.Column="1" Content="+/-"/>
-        <Button Grid.Row="1" Grid.Column="2" Content="C"/>
-        <Button Grid.Row="1" Grid.Column="3" Content="/" Background="#FFFF9C6E"/>
+        <Button Grid.Row="1" Grid.Column="0" Content="AC" IsCancel="True" Height="61" VerticalAlignment="Top" Style="{StaticResource ButtonStyleClear}"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="+/-" Style="{StaticResource BaseButtonStyle}"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="C" Style="{StaticResource BaseButtonStyle}"/>
+        <Button Grid.Row="1" Grid.Column="3" Content="/" Style="{StaticResource ButtonStyleCalc}"/>
         <Button Grid.Row="2" Grid.Column="0" Content="7" Background="#FF9B9494"/>
         <Button Grid.Row="2" Grid.Column="1" Content="8" Background="#FF9B9494"/>
         <Button Grid.Row="2" Grid.Column="2" Content="9" Background="#FF9B9494"/>
